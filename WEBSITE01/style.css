@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.lds-dual-ring,
+.lds-dual-ring:after {
+  box-sizing: border-box;
+}
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  color: green;
+  border: 6.4px solid currentColor;
+  border-color: currentColor transparent currentColor transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.fadecontent {
+    animation-name: fade;
+    animation-duration: 3s;
+}
+
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.content {
+    display: none;
+}
+
+@keyframes loder-logo {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+.loader-logo {
+    position: absolute;
+    top: 48%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    animation-name: loder-logo;
+    animation-duration: 3s;
+}
+
+
+/* navbar */
+.collapse .container a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
+    height: 100%;
+}
+
+.btn-link:hover {
+    color: black;
+}
+
+.btn-link {
+    width: 100%;
+    text-align: center;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+#toggle-btn {
+  border-radius: 30px;
+  border: 2px solid black;
+  background-color: white;
+}
+
+@media (max-width: 540px) {
+  #toggle-btn {
+    position: relative;
+    left: 23rem;
+    top: 4rem;
+  }
+
+  @keyframes loder-logo {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+.loader-logo {
+    position: absolute;
+    top: 48%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    animation-name: loder-logo;
+    animation-duration: 3s;
+}
+
+}
